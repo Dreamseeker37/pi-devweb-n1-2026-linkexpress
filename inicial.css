@@ -1,7 +1,16 @@
 body {
-    background-color: rgb(96, 39, 230);
+   background-color: rgb(219, 219, 254);
 }
 
 h1 {
     color: white;
+}
+
+.nav-link {
+    color: red;
+}
+
+ul {
+    display: flex;
+    justify-content: center;
 }
