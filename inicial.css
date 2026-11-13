@@ -1,16 +1,21 @@
 body {
-   background-color: rgb(219, 219, 254);
+   background-color: rgb(238, 238, 238);
 }
 
 h1 {
-    color: white;
+    color: rgb(0, 0, 0);
 }
 
 .nav-link {
-    color: red;
+    color: rgb(110, 51, 248);
 }
 
 ul {
     display: flex;
     justify-content: center;
+}
+
+section {
+    display: flex;
+    justify-content: space-around;
 }
