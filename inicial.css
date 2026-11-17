@@ -31,3 +31,9 @@ section {
     display: flex;
     
 }
+
+.slaoq{
+    width:800px ;
+    height: 200px;
+    border-radius: 70px;
+}
