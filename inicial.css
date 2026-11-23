@@ -1,4 +1,21 @@
-/* CONFIGURAÇÕES GERAIS */
+
+/* =================================
+   IDENTIDADE VISUAL
+================================= */
+
+:root {
+    --roxo: #542477;
+    --roxo-hover: #71399C;
+    --preto: #171717;
+    --branco: #FFFFFF;
+    --cinza: #666666;
+    --fundo-cinza: #F5F3F7;
+}
+
+
+/* =================================
+   CONFIGURAÇÕES GERAIS
+================================= */
 
 * {
     margin: 0;
@@ -12,14 +29,18 @@ html {
 
 body {
     font-family: Arial, sans-serif;
-    background-color: #ffffff;
-    color: #202020;
+    background-color: var(--branco);
+    color: var(--preto);
 }
-/* CABEÇALHO */
+
+
+/* =================================
+   CABEÇALHO
+================================= */
 
 header {
     width: 100%;
-    background-color: #ffffff;
+    background-color: var(--branco);
 }
 
 header nav {
@@ -29,14 +50,16 @@ header nav {
     align-items: center;
 }
 
+
 /* LOGOTIPO */
 
 .logo {
-    color: #202020;
+    color: var(--preto);
     text-decoration: none;
     font-size: 22px;
     font-weight: 700;
 }
+
 
 /* MENU */
 
@@ -50,16 +73,20 @@ header nav {
 }
 
 .menu a {
-    color: #333333;
+    color: var(--preto);
     text-decoration: none;
     font-size: 15px;
     transition: color 0.3s;
 }
 
 .menu a:hover {
-    color: #347653;
+    color: var(--roxo);
 }
-/* SEÇÃO PRINCIPAL */
+
+
+/* =================================
+   SEÇÃO PRINCIPAL - HERO
+================================= */
 
 .hero {
     min-height: 620px;
@@ -71,17 +98,20 @@ header nav {
     padding: 80px 20px;
 }
 
-/* SUBTÍTULO */
+
+/* SUBTÍTULOS */
 
 .subtitulo {
-    color: #347653;
+    display: block;
+    color: var(--roxo);
     font-size: 13px;
     font-weight: 600;
     letter-spacing: 3px;
     margin-bottom: 25px;
 }
 
-/* TÍTULO */
+
+/* TÍTULO PRINCIPAL */
 
 .hero h1 {
     max-width: 850px;
@@ -91,16 +121,19 @@ header nav {
     margin-bottom: 25px;
 }
 
+
 /* DESCRIÇÃO */
 
 .hero p {
     max-width: 520px;
     font-size: 17px;
     line-height: 1.7;
-    color: #666666;
+    color: var(--cinza);
     margin-bottom: 30px;
 }
-/* AÇÕES DO HERO */
+
+
+/* BOTÕES DO HERO */
 
 .hero-acoes {
     display: flex;
@@ -110,8 +143,8 @@ header nav {
 }
 
 .botao-principal {
-    background-color: #174D35;
-    color: white;
+    background-color: var(--roxo);
+    color: var(--branco);
     padding: 15px 25px;
     border-radius: 30px;
     text-decoration: none;
@@ -120,19 +153,23 @@ header nav {
 }
 
 .botao-principal:hover {
-    background-color: #347653;
+    background-color: var(--roxo-hover);
 }
 
 .link-secundario {
-    color: #252525;
+    color: var(--preto);
     text-decoration: none;
     font-size: 14px;
 }
 
 .link-secundario:hover {
-    color: #347653;
+    color: var(--roxo);
 }
-/* IMAGEM DE DESTAQUE */
+
+
+/* =================================
+   IMAGEM DE DESTAQUE
+================================= */
 
 .imagem-destaque {
     width: 100%;
@@ -146,11 +183,15 @@ header nav {
     display: block;
     border-radius: 5px;
 }
-/* SEÇÃO SOBRE */
+
+
+/* =================================
+   SEÇÃO SOBRE NÓS
+================================= */
 
 .sobre {
     padding: 120px 8%;
-    background-color: #ffffff;
+    background-color: var(--branco);
 }
 
 .sobre-conteudo {
@@ -169,18 +210,121 @@ header nav {
 }
 
 .sobre-texto p {
-    color: #666666;
+    color: var(--cinza);
     font-size: 17px;
     line-height: 1.8;
     margin-bottom: 30px;
 }
 
 .sobre-link {
-    color: #174D35;
+    color: var(--roxo);
     text-decoration: none;
     font-weight: 600;
 }
 
 .sobre-link:hover {
-    color: #347653;
+    color: var(--roxo-hover);
+}
+
+
+/* =================================
+   SEÇÃO SERVIÇOS
+================================= */
+
+.servicos {
+    padding: 120px 8%;
+    background-color: var(--fundo-cinza);
+}
+
+.servicos h2 {
+    font-size: 46px;
+    font-weight: 500;
+    color: var(--preto);
+    margin-top: 20px;
+    margin-bottom: 20px;
+}
+
+.servicos p {
+    color: var(--cinza);
+    font-size: 17px;
+    line-height: 1.8;
+}
+
+
+/* =================================
+   SEÇÃO SUSTENTABILIDADE
+================================= */
+
+.sustentabilidade {
+    padding: 120px 8%;
+    background-color: var(--branco);
+}
+
+.sustentabilidade h2 {
+    font-size: 46px;
+    font-weight: 500;
+    color: var(--preto);
+    margin-top: 20px;
+    margin-bottom: 20px;
+}
+
+.sustentabilidade p {
+    color: var(--cinza);
+    font-size: 17px;
+    line-height: 1.8;
+}
+
+
+/* =================================
+   RESPONSIVIDADE
+================================= */
+
+@media (max-width: 768px) {
+
+    header nav {
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        gap: 20px;
+        padding: 20px 0;
+    }
+
+    .menu {
+        grid-column: auto;
+        flex-wrap: wrap;
+        justify-content: center;
+        gap: 18px;
+    }
+
+    .hero {
+        min-height: 550px;
+    }
+
+    .hero h1 {
+        font-size: 40px;
+    }
+
+    .hero-acoes {
+        flex-direction: column;
+        gap: 20px;
+    }
+
+    .imagem-destaque img {
+        height: 280px;
+    }
+
+    .sobre {
+        padding: 80px 8%;
+    }
+
+    .sobre-conteudo {
+        grid-template-columns: 1fr;
+        gap: 35px;
+    }
+
+    .sobre-titulo h2,
+.servicos h2,
+.sustentabilidade h2 {
+    font-size: 36px;
+}
 }
