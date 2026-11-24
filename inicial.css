@@ -42,7 +42,10 @@ header {
     display: flex;
 
     width: 100%;
-    background-color: var(--branco);
+    background-color: white;
+    border: black 2px solid;
+    border-bottom-left-radius: 20px;
+    border-bottom-right-radius: 20px;
 }
 
 header nav {
@@ -58,6 +61,7 @@ header nav {
     flex-direction: column;
 
     padding-top: 1vh;
+    margin-bottom: 20px;
 }
 
 /* LOGOTIPO */
