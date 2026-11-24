@@ -1,0 +1,340 @@
+
+/* =================================
+   IDENTIDADE VISUAL
+================================= */
+
+:root {
+    --roxo: #542477;
+    --roxo-hover: #71399C;
+    --preto: #171717;
+    --branco: #FFFFFF;
+    --cinza: #666666;
+    --fundo-cinza: #F5F3F7;
+}
+
+
+/* =================================
+   CONFIGURAÇÕES GERAIS
+================================= */
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+html {
+    scroll-behavior: smooth;
+}
+
+body {
+    font-family: Arial, sans-serif;
+    background-color: var(--branco);
+    color: var(--preto);
+}
+
+
+/* =================================
+   CABEÇALHO
+================================= */
+
+header {
+    width: 100%;
+    background-color: var(--branco);
+}
+
+header nav {
+    min-height: 90px;
+    display: grid;
+    grid-template-columns: 1fr auto 1fr;
+    align-items: center;
+}
+
+
+/* LOGOTIPO */
+
+.logo {
+    display: flex;
+    justify-content:center;
+    width: 50px;
+    height: 50px;
+    font-weight: 700;
+}
+
+
+/* MENU */
+
+.menu {
+    display: flex;
+    list-style: none;
+    gap: 35px;
+    margin: 0;
+    padding: 0;
+    grid-column: 2;
+}
+
+.menu a {
+    color: var(--preto);
+    text-decoration: none;
+    font-size: 15px;
+    transition: color 0.3s;
+}
+
+.menu a:hover {
+    color: var(--roxo);
+}
+
+
+/* =================================
+   SEÇÃO PRINCIPAL - HERO
+================================= */
+
+.hero {
+    min-height: 620px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    padding: 80px 20px;
+}
+
+
+/* SUBTÍTULOS */
+
+.subtitulo {
+    display: block;
+    color: var(--roxo);
+    font-size: 13px;
+    font-weight: 600;
+    letter-spacing: 3px;
+    margin-bottom: 25px;
+}
+
+
+/* TÍTULO PRINCIPAL */
+
+.hero h1 {
+    max-width: 850px;
+    font-size: clamp(38px, 5vw, 68px);
+    font-weight: 500;
+    line-height: 1.12;
+    margin-bottom: 25px;
+}
+
+
+/* DESCRIÇÃO */
+
+.hero p {
+    max-width: 520px;
+    font-size: 17px;
+    line-height: 1.7;
+    color: var(--cinza);
+    margin-bottom: 30px;
+}
+
+
+/* BOTÕES DO HERO */
+
+.hero-acoes {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 25px;
+}
+
+.botao-principal {
+    background-color: var(--roxo);
+    color: var(--branco);
+    padding: 15px 25px;
+    border-radius: 30px;
+    text-decoration: none;
+    font-size: 14px;
+    transition: background-color 0.3s;
+}
+
+.botao-principal:hover {
+    background-color: var(--roxo-hover);
+}
+
+.link-secundario {
+    color: var(--preto);
+    text-decoration: none;
+    font-size: 14px;
+}
+
+.link-secundario:hover {
+    color: var(--roxo);
+}
+
+
+/* =================================
+   IMAGEM DE DESTAQUE
+================================= */
+
+.imagem-destaque {
+    width: 100%;
+    padding: 0 5%;
+}
+
+.imagem-destaque img {
+    width: 100%;
+    height: 460px;
+    object-fit: cover;
+    display: block;
+    border-radius: 5px;
+}
+
+
+/* =================================
+   SEÇÃO SOBRE NÓS
+================================= */
+
+.sobre {
+    padding: 120px 8%;
+    background-color: var(--branco);
+}
+
+.sobre-conteudo {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 100px;
+    align-items: center;
+}
+
+.sobre-titulo h2 {
+    font-size: 46px;
+    font-weight: 500;
+    line-height: 1.2;
+    max-width: 500px;
+    margin-top: 20px;
+}
+
+.sobre-texto p {
+    color: var(--cinza);
+    font-size: 17px;
+    line-height: 1.8;
+    margin-bottom: 30px;
+}
+
+.sobre-link {
+    color: var(--roxo);
+    text-decoration: none;
+    font-weight: 600;
+}
+
+.sobre-link:hover {
+    color: var(--roxo-hover);
+}
+
+
+/* =================================
+   SEÇÃO SERVIÇOS
+================================= */
+
+.servicos {
+    padding: 120px 8%;
+    background-color: var(--fundo-cinza);
+}
+
+.servicos h2 {
+    font-size: 46px;
+    font-weight: 500;
+    color: var(--preto);
+    margin-top: 20px;
+    margin-bottom: 20px;
+}
+
+.servicos p {
+    color: var(--cinza);
+    font-size: 17px;
+    line-height: 1.8;
+}
+
+
+/* =================================
+   SEÇÃO SUSTENTABILIDADE
+================================= */
+
+.sustentabilidade {
+    padding: 120px 8%;
+    background-color: var(--branco);
+}
+
+.sustentabilidade h2 {
+    font-size: 46px;
+    font-weight: 500;
+    color: var(--preto);
+    margin-top: 20px;
+    margin-bottom: 20px;
+}
+
+.sustentabilidade p {
+    color: var(--cinza);
+    font-size: 17px;
+    line-height: 1.8;
+}
+
+
+/* =================================
+   RESPONSIVIDADE
+================================= */
+
+@media (max-width: 768px) {
+
+    header nav {
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        gap: 20px;
+        padding: 20px 0;
+    }
+
+    .menu {
+        grid-column: auto;
+        flex-wrap: wrap;
+        justify-content: center;
+        gap: 18px;
+    }
+
+    .hero {
+        min-height: 550px;
+    }
+
+    .hero h1 {
+        font-size: 40px;
+    }
+
+    .hero-acoes {
+        flex-direction: column;
+        gap: 20px;
+    }
+
+    .imagem-destaque img {
+        height: 280px;
+    }
+
+    .sobre {
+        padding: 80px 8%;
+    }
+
+    .sobre-conteudo {
+        grid-template-columns: 1fr;
+        gap: 35px;
+    }
+
+    .sobre-titulo h2,
+.servicos h2,
+.sustentabilidade h2 {
+    font-size: 36px;
+}
+}
+
+/* BALANÇO */
+
+.Janeiro {
+    width: 250px;
+    height: 250px;
+    display: flex;
+    justify-content: 
+
