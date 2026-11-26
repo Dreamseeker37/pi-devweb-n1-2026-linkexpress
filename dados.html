@@ -1,0 +1,140 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Balanço Mensal</title>
+
+    <link rel="stylesheet" href="dados.js">
+    <!-- Biblioteca Chart.js -->
+    <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            background: #f1f5f0;
+            padding: 20px;
+        }
+
+        h1 {
+            color: #24543b;
+        }
+
+        .grafico {
+            background: white;
+            padding: 20px;
+            margin-bottom: 25px;
+            border-radius: 12px;
+            max-width: 800px;
+        }
+    </style>
+</head>
+
+<body>
+
+    <h1>Balanço Mensal</h1>
+
+    <div class="grafico">
+        <h2>KM percorridos</h2>
+        <canvas id="graficoKm"></canvas>
+    </div>
+
+    <div class="grafico">
+        <h2>Entregas realizadas</h2>
+        <canvas id="graficoEntregas"></canvas>
+    </div>
+
+    <div class="grafico">
+        <h2>Economia de CO₂</h2>
+        <canvas id="graficoCo2"></canvas>
+    </div>
+
+    <script>
+
+        // MESES
+        const meses = [
+            "Janeiro",
+            "Fevereiro",
+            "Março",
+            "Abril",
+            "Maio",
+            "Junho",
+            "Julho",
+            "Agosto",
+            "Setembro",
+            "Outubro"
+        ];
+
+        // SEUS DADOS
+        const km = [12061, 11141, 9455, 9913, 9360, 8669, 10635, 10079, 10868, 9706];
+
+        const entregas = [1558, 1930, 2147, 2312, 2706, 2378, 1909, 2349, 2466, 2615];
+
+        const co2 = [2.6, 2.4, 2, 2.16, 2.04, 1.89, 2.31, 2.19, 2.36, 2.11];
+
+
+        // GRÁFICO DE KM
+        new Chart(document.getElementById("graficoKm"), {
+            type: "bar",
+
+            data: {
+                labels: meses,
+
+                datasets: [{
+                    label: "KM percorridos",
+                    data: km,
+                    backgroundColor: "#39965b"
+                }]
+            },
+
+            options: {
+                responsive: true
+            }
+        });
+
+
+        // GRÁFICO DE ENTREGAS
+        new Chart(document.getElementById("graficoEntregas"), {
+            type: "line",
+
+            data: {
+                labels: meses,
+
+                datasets: [{
+                    label: "Entregas",
+                    data: entregas,
+                    borderColor: "#3478c5",
+                    backgroundColor: "#3478c5",
+                    tension: 0.3
+                }]
+            },
+
+            options: {
+                responsive: true
+            }
+        });
+
+
+        // GRÁFICO DE CO2
+        new Chart(document.getElementById("graficoCo2"), {
+            type: "bar",
+
+            data: {
+                labels: meses,
+
+                datasets: [{
+                    label: "CO₂ economizado (kg)",
+                    data: co2,
+                    backgroundColor: "#80b95c"
+                }]
+            },
+
+            options: {
+                responsive: true
+            }
+        });
+
+    </script>
+
+</body>
+</html>

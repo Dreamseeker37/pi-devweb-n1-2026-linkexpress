@@ -44,8 +44,8 @@ header {
     display: flex;
 
     width: 100%;
-    background-color: rgb(138, 65, 207);
-    border: black 2px solid;
+    background-color: rgb(201, 147, 255);
+    border: solid rgb(174, 117, 235) 3px;
     border-bottom-left-radius: 20px;
     border-bottom-right-radius: 20px;
 }
@@ -96,7 +96,7 @@ header nav {
 }
 
 .menu a:hover {
-    color: #71399C;
+    color: #5c0f97;
 }
 
 
@@ -345,12 +345,50 @@ header nav {
 }
 }
 
-/* BALANÇO */
+footer {
+    background-color: rgb(201, 147, 255);
+    height: 800px;
+    border: solid rgb(174, 117, 235) 3px;
 
-.Janeiro {
-    width: 250px;
-    height: 250px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+
+.mapafooter {
+    background-color: rgb(143, 57, 189);
+    border: solid 2px rebeccapurple;
+    border-radius: 25px;
+    
+    display: flex;
+    flex-direction: column;
+    
+    justify-content: center;
+    align-items: center;
+
+    width: 90vw;
+    height: 720px;
+}
+
+.titulofooter {
+    
     display: flex;
     flex-direction: row;
+    
+    justify-content: space-around;
+    width: 90vw;
+    
+}
 
+.titulofooter h4 {
+    color: white;
+}
+
+.footermapas {
+    width: 90vw;
+
+    display: flex;
+    justify-content: space-around;
 }
